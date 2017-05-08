@@ -495,14 +495,6 @@ body {
           // GWD Predefined Function
           gwd.actions.gwdPagedeck.goToPage('pagedeck', 'page1', 'fade', 1000, 'linear', 'top');
         };
-        gwd.auto_Page1Mousedown = function(event) {
-          // GWD Predefined Function
-          gwd.actions.gwdPagedeck.goToNextPage('pagedeck', false, 'fade', 1000, 'linear', 'top');
-        };
-        gwd.auto_Page1_1Mousedown = function(event) {
-          // GWD Predefined Function
-          gwd.actions.gwdPagedeck.goToPreviousPage('pagedeck', false, 'fade', 1000, 'linear', 'top');
-        };
       </script>
       <script type="text/javascript" gwd-events="registration">
         // Support code for event handling in Google Web Designer
@@ -518,8 +510,6 @@ body {
           gwd.actions.events.addHandler('gwd-rg_ib', 'click', gwd.gotors, false);
           gwd.actions.events.addHandler('gwd-imagebutton_3', 'click', gwd.gotogs, false);
           gwd.actions.events.addHandler('gwd-imagebutton_4', 'click', gwd.gotors, false);
-          gwd.actions.events.addHandler('document.body', 'mousedown', gwd.auto_Page1Mousedown, false);
-          gwd.actions.events.addHandler('page1_1', 'mousedown', gwd.auto_Page1_1Mousedown, false);
         };
         gwd.actions.events.deregisterEventHandlers = function(event) {
           gwd.actions.events.removeHandler('me_cv_ib', 'mouseover', gwd.auto_Gwd_imagebutton_5Mouseover, false);
@@ -532,8 +522,6 @@ body {
           gwd.actions.events.removeHandler('gwd-rg_ib', 'click', gwd.gotors, false);
           gwd.actions.events.removeHandler('gwd-imagebutton_3', 'click', gwd.gotogs, false);
           gwd.actions.events.removeHandler('gwd-imagebutton_4', 'click', gwd.gotors, false);
-          gwd.actions.events.removeHandler('document.body', 'mousedown', gwd.auto_Page1Mousedown, false);
-          gwd.actions.events.removeHandler('page1_1', 'mousedown', gwd.auto_Page1_1Mousedown, false);
         };
         document.addEventListener("DOMContentLoaded", gwd.actions.events.registerEventHandlers);
         document.addEventListener("unload", gwd.actions.events.deregisterEventHandlers);
